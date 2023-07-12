@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;1,300&display=swap');
+
+/* Common Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Rubik', sans-serif;
+    font-family: 300px;
+
+}
+
+html {
+    font-size: 62%;
+}
+
+.section-heading {
+    font-size: 10rem;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5rem;
+    text-shadow: .3rem .3rem .3rem #000;
+    padding: 20px;
+}
+
+
+/* NavBar */
+.navbar{
+    width: 100%;
+    height: 12rem;
+    background-color: #100f0f;
+    position: fixed;
+    top: -14rem;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0.2rem 0.2rem 0.2rem black;
+    transition: top 0.4s;
+}
+
+.navbar.change{
+    top: 0;
+}
+
+
+.navbar-link{
+    color: #aaa;
+    margin: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.navbar-link:hover{
+    color: rgb(243, 240, 240);
+    transition: color .2s;
+}
+
+.menu{
+    width: 4rem;
+    height: 6rem;
+    background-color: black;
+    position: fixed;
+    top: 1rem;
+    left: 4rem;
+    border-radius: 20rem 20rem 15rem 15rem;
+    box-shadow: .1rem .1rem .1rem black -0.1rem -0.1rem --0.1rem black ;
+    cursor: pointer;
+    transition: top 0.4s .2s;
+    z-index: 100;
+
+
+}
+
+.menu.change{
+    top: 15rem;
+}
+
+
+
+.menu::before{
+
+    content: "";
+    width: 0.5rem;
+    height: 13rem;
+    background-color: black;
+    position: absolute;
+    top: -12rem;
+    left:calc(50% -0.15rem);
+    right: 18px;
+    box-shadow: .1rem 0.1rem black;
+
+
+}
+
+.navbar-link i{
+    font-size: 4rem;
+}
+
+
+.navbar-link span{
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+/* End Of NavBar */
+
+/* Section-1 */
+.section-1 {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(45, 44, 44);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.section-heading {
+    font-size: 10rem;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5rem;
+    text-shadow: .3rem .3rem .3rem #000;
+}
+
+
+.section-1-icons i {
+    font-size: 20rem;
+    color: #a79a2d;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    text-shadow: .3rem .3rem .3rem #131212;
+}
+
+.section-1-icons i.change {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* End-Of-Section-1 */
+
+
+/* SECTION - 2      Card Styaling Coding */
+.section-2 {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(45, 44, 44);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10rem 0;
+}
+
+.card-Box {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Card {
+    width: 20rem;
+    background-color: rgb(160, 160, 19);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1rem 1rem 1rem 1rem #000;
+    position: relative;
+    transform: rotateY(20deg) skewX(-2deg);
+    transition: transfrom .5s;
+}
+
+
+
+
+.Card::before {
+    content: "";
+    height: 100%;
+    width: 1rem;
+    background-color: #817824;
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    transform: skewY(40deg);
+    transform-origin: right;
+    box-shadow: -0.1rem -0.1rem -0.1rem black;
+}
+
+.Card::after {
+    content: "";
+    height: 1rem;
+    width: 100%;
+    background-color: #6b6212;
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    transform: skewX(50deg);
+    transform-origin: bottom;
+    box-shadow: -0.1rem -0.1rem -0.1rem black;
+}
+
+.Card:hover {
+    transform: rotateY(20deg) skewX(-2rem) translateY(-3rem);
+    box-shadow: 2rem 2rem 2rem black;
+}
+
+
+.Card-img {
+    width: 100%;
+}
+
+.cardName {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    color: #111;
+    margin: 2rem 0;
+    text-shadow: 1.5rem 1.5rem 1.5rem #000;
+}
+
+.card-btn {
+    width: 70%;
+    background-color: #111;
+    color: #888;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    border: none;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    box-shadow: -.2rem -.2rem -.2rem black;
+}
+
+/* END OF SECTION - 2 */
+
+/* SECTION  -  3   */
+.section-3 {
+    background-color: rgb(45, 44, 44);
+    padding: 5rem 0;
+
+
+}
+
+
+.Food-img {
+    width: 24vw;
+    height: 18vw;
+    object-fit: cover;
+    box-shadow: .3rem .3rem 0.1rem 0.1rem rgb(221, 103, 103), .3rem .3rem .5rem #a2e946, .3rem .3rem .1rem #297ce9, .9rem .9rem .9rem #e92999;
+    transition: all .5s;
+}
+
+
+.Gallary:hover .Food-img {
+    box-shadow: .7rem .7rem 0.1rem 0.1rem rgb(221, 103, 103), .2rem .2rem .5rem #a2e946, .3rem .3rem .1rem #297ce9, .5rem .5rem .9rem #e92999;
+    filter: blur(.2rem);
+    opacity: .2rem;
+    transform: scale(1.1);
+
+}
+
+.section-heading {
+    font-size: 10rem;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5rem;
+    text-shadow: .3rem .3rem .3rem #000;
+    padding: 20px;
+}
+
+
+.gallary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10rem;
+
+}
+
+.Gallary {
+    position: relative;
+    margin: 4rem 1rem 1rem;
+}
+
+.Gallary::before {
+    content: "";
+    position: absolute;
+    width: .2rem;
+    height: 0;
+    background-color: #fff;
+    top: 2vw;
+    left: 80%;
+    transition: height .9s;
+    z-index: 10;
+}
+
+
+.Gallary:hover::before {
+    height: 80%;
+}
+
+.Gallary:hover::after {
+    width: 90%;
+}
+
+.Gallary::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0.2rem;
+    background-color: #fff;
+    top: 30%;
+    left: 2rem;
+    transition: width .9s;
+}
+
+.Gallary:hover::after {
+    width: 90%;
+}
+
+.food-name {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color: rgb(7, 7, 7);
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s;
+}
+
+
+.Gallary:hover .food-name {
+    width: 100%;
+    transition: width 1.6s 0.8s;
+}
+
+
+.food-info {
+    position: absolute;
+    bottom: 3vw;
+    left: 2rem;
+    width: 70%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+    font-weight: bold;
+
+}
+
+
+.Gallary:hover .food-info {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .3s .3s;
+}
+
+
+/* END  OF   SECTION  -  3  */
+
+
+/* Section - 4 -  Footer */
+
+
+
+
+
+.section-4{
+    width: 100%;
+    height: 30vh;
+   background-color: #100f0f;
+   color: white;
+   display: flex;
+   justify-content: space-around;
+   padding: 3rem 0;
+   position: relative;
+   align-items: flex-start;
+}
+
+.section-4-text{
+    text-transform: uppercase;
+}
+
+.section-4-heading{
+    font-size: 5rem;
+    font-weight: bolder;
+    color: #c2b32d;
+}
+
+.signup-form{
+    display: flex;
+    align-items: center;
+}
+
+.signup-form-input{
+    width: 20rem;
+    height: 3rem;
+    padding: 1rem;
+    border: .3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    color: #3c3c3c;
+    border-radius: 4px;
+}
+.signup-form-input::placeholder{
+    color: #352e2e;
+}
+
+.signup-form-pass{
+    width: 20rem;
+    height: 3rem;
+    padding: 1rem;
+    margin: 2rem;
+    font-size: 1.2rem;
+    font-weight:700 ;
+    letter-spacing: .1rem;
+    color: #3c3c3c;
+    border-radius: 4px;
+
+}
+
+
+.signup-form-pass::placeholder{
+    color: #352e2e;
+}
+
+.signup-form-btn{
+    position: relative;
+    height: 4rem;
+    width: 6rem;
+    background-color: #333;
+    color: #a79a2d;
+    border: none;
+    cursor: pointer;
+   
+}
+
+.signup-form-btn:hover{
+    --_i: 100%;
+  color: white;
+  transition: .3s, -webkit-mask-size .3s .3s;
+  font-weight: bolder;
+}
+
+.section-4-Lines{
+    font-size: 1.5rem;
+    color: #796868;
+}
+
+.copyright{
+    position: absolute;
+    bottom: 1rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    border-top: .1rem solid #888;
+    padding-top: 1rem;
+    width: 100%;
+    text-align: center;
+    
+}
+
+
+
+
+/* End Of Section - 4 */
+
+/* Responsive  */
+
+@media(max-width: 1100px){
+    html{
+        font-size: 50%;
+    }
+    .section-2{
+        height: auto;
+        padding: 10rem 0; 
+    }
+    .card-Box{
+        margin-top: 10rem;
+    }
+
+    .Gallary{
+        width: 40rem;
+        height: 25rem;
+        margin: 5rem;
+    }
+
+    .Food-img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media(max-width:1000px){
+    .section-heading{
+        font-size: 6rem;
+        margin: 0.5rem;
+    }
+    .section-1-icons{
+        font-size: 25rem;
+    }
+    .card-Box{
+        flex-wrap: wrap;
+    }
+    .Card{
+        margin: 5rem;
+    }
+    .section-4{
+        height: 30rem;
+    }
+}
+
+
+@media(max-width:800px){
+    .navbar-link{
+        margin: 2rem;
+
+    }
+
+    .navbar-link i{
+        font-size: 4rem;
+    }
+
+    .navbar-link span{
+         font-size: 2rem;
+    }
+}
+
+@media(max-width:550px){
+    .section-heading{
+        font-size: 7rem;
+        margin: 0 10rem;
+    }
+
+    .section-1-icons{
+        font-size: 20rem;
+    }
+
+    .menu{
+        left: 2rem;
+    }
+
+    .section-4{
+        height: 40rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .section-4-text{
+        margin-bottom: 6rem;
+    }
+
+}
+
+
+@media(max-width:305px){
+    html{
+        font-size: 30%;
+    }
+    .navbar-link{
+        margin: 0 0.7rem;
+    }
+}
+/* End Of Responsive */
+
+
+
+/* End Of Common Style */
+
